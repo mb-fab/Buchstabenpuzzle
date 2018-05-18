@@ -33,7 +33,7 @@ module char(c)
         0
         ])
     {
-        if (c == "A")
+        if (c == "A" || c == "Ä")
         {
             translate([
                 -text_size * 0.25,
@@ -83,7 +83,7 @@ module char(c)
                 material_z + 2*nothing
                 ], center=true);
         }
-        else if (c == "O")
+        else if (c == "O" || c == "Ö")
         {
             translate([
                 -text_size * 0.25,
@@ -135,7 +135,21 @@ module char(c)
                 material_z + 2*nothing
                 ], center=true);
         }
+        else if (c == "&")
+        {
+            translate([
+                text_size * 0.02,
+                -text_size * 0.03,
+                0
+                ])
+            rotate(35)
+            #cube([
+                text_size * 0.3,
+                text_size * 0.2,
+                material_z + 2*nothing
+                ], center=true);
+        }
     }
 }
 
-char("A");
+char("&");

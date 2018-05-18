@@ -1,7 +1,9 @@
 
 use <char.scad>;
+use <model.scad>;
 
 projection()
 {
-    char("A");
+    //char("A");
+    model();
 }
