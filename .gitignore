@@ -3,6 +3,6 @@
 *.scad.??????
 
 # Generated
-*.svg
+#*.svg
 *.png
 
